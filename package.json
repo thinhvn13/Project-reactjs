@@ -20,7 +20,7 @@
     "express",
     "mongo"
   ],
-  "author": "Daniel 'The Code Whisperer' Stern",
+  "author": "ThinhVN",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.1",
