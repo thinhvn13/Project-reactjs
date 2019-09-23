@@ -1,0 +1,76 @@
+.hover-shadow{
+    height: 270px;
+    background-position: center;
+    background-size: cover;
+    padding:0;
+}
+.hover-shadow i{
+    border: 2px solid bisque;
+    padding: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: bisque;
+    position: relative;
+    top: 100;
+    visibility: hidden;
+    
+}
+.show-ic{
+    -webkit-animation: 1s animation-ic; /* Safari 4.0 - 8.0 */
+    animation: 1s animation-ic ;
+    animation-fill-mode: forwards;
+    /* visibility: visible; */
+}
+
+.hidden-ic{
+    -webkit-animation: animation-hidden-ic 1s; /* Safari 4.0 - 8.0 */
+    animation: animation-hidden-ic 1s;
+    animation-fill-mode: forwards;
+}
+
+.hover-shadow:hover{
+    cursor: zoom-in;
+}
+
+@-webkit-keyframes animation-ic {
+    0% {
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+}
+
+@keyframes animation-ic {
+    0% {
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+}
+
+@-webkit-keyframes animation-hidden-ic {
+    0% {
+        visibility: visible;
+        opacity: 1;
+      }
+      100% {
+        visibility: hidden;
+        opacity: 0;
+      }
+}
+
+@keyframes animation-hidden-ic {
+    0% {
+        visibility: visible;
+        opacity: 1;
+      }
+      100% {
+        visibility: hidden;
+        opacity: 0;
+      }
+}
+

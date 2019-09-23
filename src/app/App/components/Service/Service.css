@@ -1,0 +1,23 @@
+.Service{
+    display: block;
+}
+.media-service{
+    padding:48px 24px;
+}
+.media-icon{
+    text-align: center;
+    margin: 0px 0px 24px;
+}
+.media-service-content{
+    text-align: center;
+}
+.media-service-content h3{
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0px 0px 20px;
+}
+.media-service-content p{
+    font-size: 15px;
+    margin: 0px 0px 16px;
+    color: gray;
+}

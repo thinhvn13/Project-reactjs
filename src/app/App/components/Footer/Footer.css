@@ -1,0 +1,90 @@
+.ftco-section{
+    background-color: black;
+    color: white;
+    margin-bottom: 0px;
+    list-style-type: none;
+}
+.fixScroll{
+    width: 100%;
+}
+.ftco-section h2{
+    font-size: 15px;
+    padding-left: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+}
+.ftco-section p{
+    padding-left: 10px;
+}
+
+.ftco-section a{
+    color: white;
+    font-size: 14px;
+}
+
+.ftco-section ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.fix-ul{
+    display: flex;
+}
+
+.ftco-section li{
+    padding: 8px;
+    font-size: 14px;
+}
+
+.ftco-section li:hover{
+    color: gray;
+}
+
+.ic-ft{
+    font-size:24px;  
+    padding-right: 15px
+}
+.ftco-icon-social{
+    display: flex;
+}
+
+.ftco-icon-social li>i{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #DBCC8F;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #DBCC8F;
+    margin-top: 10px;
+}
+
+.Copyright{
+    margin-top: 30px
+}
+
+.mouse{
+    position: relative;
+    bottom: 25px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+.mouse a{
+    border: 2px solid white;
+    background-color: white;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 50%;
+    margin-bottom: 90px;
+    /* margin-left: 45%; */
+}
+
+.mouse i{
+    color: black;
+    position: relative;
+    -webkit-animation: mymove 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 1s infinite;
+}
+

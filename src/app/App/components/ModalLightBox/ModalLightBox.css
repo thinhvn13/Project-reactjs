@@ -1,0 +1,90 @@
+.test444{
+    width: 100%;
+    height: 100%;
+}
+
+.ItemModal:nth-child(2){
+    display: block;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: fixed;
+  top: 46%;
+  width: auto;
+  padding: 30px;
+  margin-top: 0px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  color: white ;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.prev,
+.next a{
+    color: white;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: black;
+  color: white;
+
+}
+
+.closeModalButton {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1;
+  }
+  
+.closeModalButton:hover,
+.closeModalButton:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+body.areaClose {
+  overflow-y: hidden;
+}
+#Ftc-Modal{
+  /* display: none; Hidden by default */
+  position: fixed; 
+  z-index: 1043;
+  outline: none !important; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  overflow: hidden; 
+  visibility:visible;
+}
+#Ftc-Modal:hover{
+    cursor: zoom-out;
+}
+.showModel{
+    display: block;
+}
+.closeTest{
+  width: 900px;
+  height: 900px;
+  position: relative;
+} 

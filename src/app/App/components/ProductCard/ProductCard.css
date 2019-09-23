@@ -1,0 +1,148 @@
+.product-card{
+    width: auto;
+    height: auto;
+    background-color: #f0f0f5;
+    margin-bottom: 30px;
+    position: relative;
+    /* z-index: -1; */
+}
+.view-product{
+    position: relative;
+    display: flex;
+    /* background-color: #DBCC8F; */
+}
+
+.product-card img{
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    /* -webkit-animation: zoom-product-visited 0.2s 1;
+    animation: zoom-product-visited 0.2s 1;
+    animation-fill-mode: forwards; */
+}
+.product-card img:hover{
+
+    /* transform: scale(1.2);
+    transition-duration: 0.2s; */
+}
+.product-card img:not( :hover){
+    /* -webkit-animation: zoom-product-visited 0.2s 1; 
+    animation: zoom-product-visited 0.2s 1;
+    animation-fill-mode: forwards; */
+}
+
+.product-card a{
+    z-index: 1;
+      
+}
+.img-pro{
+    /* display: inline; */
+}
+.product-card .status{
+    /* position: relative; */
+    padding: 10px 1px;
+    background-color: #DBCC8F;
+    color: black;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    text-orientation: sideways;
+    margin: 0rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    writing-mode: vertical-lr;
+    /* z-index: 1; */
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+.btn-area{
+    position: absolute;
+    bottom: 0%;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    visibility:hidden; 
+    cursor: pointer;
+}
+
+
+.btn-add-to-cart,
+.btn-buy-now{
+    justify-content: center;
+    font-size: 10px;
+    padding: 10px 0;
+    width: 50%;
+    background-color: #f8f9fa ;
+    margin: 0px 5px;
+}
+.btn-add-to-cart{
+    background-color: black;
+    color: white;
+}
+.btn-buy-now:hover,
+.btn-add-to-cart:hover{
+    background-color: #DBCC8F;
+    color: white;
+
+}
+.circle-over{
+    width: 75%;
+    height: 50%;
+    position: absolute;
+    bottom: 25%;
+    right: 12.5%;
+    border-radius: 50%;
+    z-index: 0;
+    background-color:33334d;
+    visibility:hidden;
+}
+.ifo-pro{
+    background-color: white;
+}
+
+.name-product{
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+.name-product a{
+    color: black;
+}
+.pracing .old-price,
+.pracing .sale-price{
+    font-size: 15px;
+}
+.pracing .old-price{
+    color:gray;
+}
+
+.area-rating{
+    display: flex;
+    position: relative;
+    margin: 10px 0px 15px 0px;
+    color: gray
+}
+.cat p{
+    font-size: 12px;
+    margin: 0px;
+}
+.cat{
+    width: fit-content;
+}
+.rating{
+    /* width: 100%; */
+    position: absolute;
+    right: 5px;
+    
+}
+
+.checked{
+    color: orange;
+}

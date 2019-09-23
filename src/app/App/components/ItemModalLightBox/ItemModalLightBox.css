@@ -1,0 +1,78 @@
+.ItemModal{
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* position: relative; */
+}
+
+.areaClose{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    
+}
+.ItemModal img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 80%;
+    max-width: 80%;
+    /* border-radius: 5px;  */
+    position: relative;
+    -webkit-animation: anishow 0.5s 1; /* Safari 4.0 - 8.0 */
+    animation: anishow 0.5s 1;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+.ItemModal:hover{
+    cursor: zoom-out;
+}
+.ItemModal img:hover{
+    cursor: pointer;
+}
+.numbertext {
+    color: gray;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 47%;
+    top: 0;
+    z-index: 1;
+}
+
+@-webkit-keyframes anishow {
+    from {left: -400px; Top: -40px}
+    to {left: 0px; Top: 0}
+    
+  }
+  
+@keyframes anishow {
+    from {left: -400px; Top: -40px}
+    to {left: 0px; Top: 0}  
+}
+
+.closeModal{
+    /* border-right: 7px solid red; */
+    /* width: 100% + 700px;
+    /* max-height: 80%; */
+    /* max-width: 100% + 700px;
+    /* height: 100%; */ 
+    position: relative;
+    left: 2020px;
+    -webkit-animation: closeModalAni 1s 1; /* Safari 4.0 - 8.0 */
+    animation: closeModalAni 1s 1;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes closeModalAni {
+    from {left: 0px;}
+    to {left: -1000px;}
+  }
+  
+@keyframes closeModalAni {
+    from {left: 0px;}
+    to {left: -1000px;}
+  }
+
+  

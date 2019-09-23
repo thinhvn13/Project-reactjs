@@ -1,0 +1,59 @@
+.contentLightBox{
+    margin: 0 0 24px;
+    padding: 0 15px;
+}
+.contentLightBox h2{
+    font-size: 40px;
+    margin: 0 0 24px;
+    width: 100%;
+    position: relative;
+    -webkit-animation: ani-showtext 1s 1; /* Safari 4.0 - 8.0 */
+    animation: ani-showtext 1s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+.contentLightBox p{
+    font-size: 15px;
+    margin: 0 0 16px;
+    width: 100%;
+    color: #808080;
+    position: relative;
+    -webkit-animation: ani-showtext 1s 1; /* Safari 4.0 - 8.0 */
+    animation: ani-showtext 1s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@-webkit-keyframes ani-showtext {
+    from {bottom: -30px}
+    to {bottom: 0px}
+    0%{
+        opacity: 0;
+    }
+    66% {
+        opacity: 0.5;
+    }
+    100% {
+    visibility: visible;
+    opacity: 1;
+
+    }
+  }
+  
+@keyframes ani-showtext {
+    from {bottom: -30px}
+    to {bottom: 0px}
+    0%{
+        opacity: 0;
+    }
+    66% {
+        opacity: 0.5;
+
+    }
+    100% {
+    visibility: visible;
+    opacity: 1;
+
+    }
+}

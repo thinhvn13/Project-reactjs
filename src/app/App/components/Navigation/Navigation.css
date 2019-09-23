@@ -1,0 +1,72 @@
+.Navigation{
+    position: absolute;
+    width: 100%;
+    color: #000;
+    z-index: 2;
+    padding: 0px;
+}
+.Navigation a{
+    text-decoration: none;
+}
+.dropdown-menu{
+    z-index: 3;
+}
+.navbar-collapse{
+    height: 50px;
+    margin-bottom: 7px;
+}
+.navbar-brand {
+    font-weight: 800;
+    font-size: 20px;
+    /* padding: 0px; */
+}
+a.nav-link {
+    font-size: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-weight: 400;
+    color: #000000 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 1 !important;
+}
+.dropdown-menu{
+    background-color: #000000;
+    color: white;
+}
+.dropdown-item{
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: #000000;
+    color: #dbcc8f;
+}
+.showNav{
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    animation: ani-showNav .2s 1;
+    animation-fill-mode: forwards;
+}
+
+.hiddenNav{
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    animation: ani-hiddenNav .2s 1;
+    animation-fill-mode: forwards;
+}
+.active-item{
+    background-color: #dbcc8f;
+}
+@keyframes ani-showNav {
+    from {top: -30px;}
+    to {top: -10px;}
+}
+@keyframes ani-hiddenNav {
+    from {top: 0px;}
+    to {top: -60px;}
+}
+

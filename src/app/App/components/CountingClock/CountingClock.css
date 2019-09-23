@@ -1,0 +1,30 @@
+#timer .time{
+    text-transform: uppercase;
+    width: 25%;
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+}
+#timer div{
+    display: grid;
+}
+#timer{
+    display:flex;
+    margin-bottom: 24px;
+}
+
+
+#timer span{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+#minutes,
+#seconds,
+#hours{
+    padding: 0 0 0 24px;
+}
+#days{
+    display: block;
+}

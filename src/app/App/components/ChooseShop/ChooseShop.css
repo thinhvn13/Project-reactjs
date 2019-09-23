@@ -1,0 +1,115 @@
+.img-choose{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.shop_1,
+.shop_2,
+.shop_3,
+.shop_4{
+    padding: 0;
+}
+
+.shop_2,
+.shop_3,
+.shop_4{
+    height: 350px;
+}
+.shop_1{
+   
+}
+.shop_3{
+    background-color: #f8f9fa !important;
+    display: flex;
+    align-items: center;
+}
+.shop_2-img{
+    float: right;
+    justify-content: flex-end;
+}
+.shop_2{
+    display: flex;
+    /* align-self: flex-end; */
+    align-items: center;
+    float: right;
+    
+}
+.cls{
+    padding:0;
+}
+.shop_4 .img-choose{
+    display: flex;
+    align-items: center;
+}
+.content-choose{
+    color: white;
+    text-align: center;
+}
+.content-choose span{
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.content-choose h2{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+.content-choose p{
+    font-size: 15px;
+    margin: 0 0 16px;
+}
+.shop_3 .content-choose, 
+.shop_4 .content-choose{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: 100%;
+   
+}
+.shop_3 .content-choose{
+    color: black;
+}
+.shop_1-img{
+    padding: 3rem;
+    text-align: end;
+    height: 700px;
+}
+.shop_1 .content-choose{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.8rem;
+    display:block;
+    width:100%;
+    display: inline-block;
+    align-self: flex-end;
+    height: fit-content;
+}
+
+.btn-choose-shop{
+    text-decoration: none;
+    color: white;
+    /* background-color: black; */
+}
+a.btn-choose-shop {
+    font-size: 12px;
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+}
+
+a.btn-choose-shop:hover{
+    background-color: #DBCC8f;
+    border-color: #DBCC8f;
+}

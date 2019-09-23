@@ -1,0 +1,75 @@
+.user-image{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    margin-bottom:24px;
+    position: relative;
+}
+.testimony-wrap{
+    all: none;
+    padding: 0 0 30;
+    user-select: none;
+    width:100%;
+}
+.testimony-wrap:active{
+    cursor: grab;
+}
+
+.icon-user{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    bottom: -15px;
+    right: 0;
+}
+
+.icon-user i{
+    color: #DBCC8F;
+}
+.text-comment{
+    
+}
+.text-comment p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.comment{
+    border-left: 1px solid #e6e6e6;
+    padding-left: 1.5rem !important;
+    margin-bottom: 24px;
+    font-size: 18px;
+    color: gray;
+    position: relative;
+    text-align: justify;
+}
+
+.comment::after{
+    position: absolute;
+    top: 30%;
+    left: 0px;
+    content: '';
+    width: 2px;
+    height: 30px;
+    background: #dbcc8f;
+}
+.name{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0;
+    color: #dbcc8f;
+}
+.position{
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.2);
+}
+

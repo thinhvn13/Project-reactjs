@@ -1,0 +1,63 @@
+.header-hotdeal{
+    color: white;
+}
+.sub-header{
+    font-size: 12px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.header-hotdeal h2{
+    font-weight: 700;
+    font-size: 40px;
+    margin:0 0 16px;
+}
+
+
+.text-deal{
+    font-weight: 800;
+}
+.text-deal a{
+    text-decoration: none;
+    color: black;
+}
+.text-deal h2{
+    font-size: 32;
+    margin: 0 0 8px;
+    font-weight: 800;
+}
+.old-price{
+    color: #000000;
+    text-decoration: line-through;
+    margin: 0 8px 0 0;
+    font-size: 24px;
+}
+.price-sale{
+    color: white;
+    font-size: 24px;
+}
+.image-pro-sale{
+    display: flex;
+}
+.image-pro-sale li{
+    width: 100px;
+    height: 100px;
+    list-style: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+ul{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+.img-item{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

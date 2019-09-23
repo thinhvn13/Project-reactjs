@@ -1,0 +1,134 @@
+.ServiceFlow{
+    background-color: rgba(0, 0, 0, 0.03);
+    margin-bottom:4rem; 
+    z-index:1;
+}
+.ServiceFlow h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;    
+}
+.ServiceFlow p{
+    font-size: 15px;  margin-bottom: 0px;    
+}
+.CardService1,
+.CardService2,
+.CardService3,
+.CardService4{
+    display: flex;
+    padding: 24px;
+    position: relative;
+    height: 140px;
+}
+
+.text{
+    margin-left: 30px;
+    /* position: relative; */
+}
+.icon3,
+.icon{
+    width: 74px;
+    height: auto;  
+    margin-top:15px; 
+    font-weight: 10;
+}
+.icon i{
+    color: black;    
+}
+.icon3 i{
+    color: black;
+    z-index: 1;    
+}
+
+.icon:before {
+    position: absolute;
+    content: '';
+    top: 45;
+    left: 40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    background: #e1d5a2;
+    z-index: -1;
+    width: 40px;
+    height: 40px;
+   
+}
+
+.icon::after{
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    content: '';
+    border: 2px dotted #b3b3b3;
+    border-bottom: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    width: 74px;
+    height: 74px;
+}
+
+.CardService2{
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
+.CardService3{
+    z-index: -2;   
+    background-color: #DBCC8F;
+}
+.CardService4{
+    z-index: -2;  
+    background-color: black;
+    color: white
+}
+
+.CardService3 p{
+    color: white;
+}
+.CardService4 .text h3{
+    color: white
+}
+.CardService4 .icon3 i{
+    color: #DBCC8F;
+}
+.icon3:before {
+    position: absolute;
+    content: '';
+    top: 45;
+    left: 40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    background: white;
+    z-index: -1;
+    width: 40px;
+    height: 40px;
+}
+
+.icon3:after{
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    content: '';
+    border: 2px dotted white;
+    border-bottom: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    width: 74px;
+    height: 74px;
+}
+.icon i{
+    /* position: relative; */
+    
+}
+.text h3{
+    color: black;
+}

@@ -1,0 +1,17 @@
+.NewProducts{
+    padding :105px 0px;
+    background-color: #f8f9fa;
+}
+.header-NewProducts{
+    text-align: center;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+.header-NewProducts h2{
+    font-size: 40px;
+    margin: 0px 0px 24px;
+}
+.header-NewProducts p{
+    font-size: 15px;
+    margin: 0px 0px 16px;
+}
