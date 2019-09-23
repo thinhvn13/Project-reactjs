@@ -1,1 +1,0 @@
-dung babel de convert jsx vs es6 into .js file
