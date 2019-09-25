@@ -1,8 +1,9 @@
 import React,{useRef, useEffect, useState} from 'react';
 import './Navigation.css';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const Navigation=()=>{
+const Navigation=({numberItem})=>{
     const clickShow = useRef(null);
     const navRef = useRef(null);
     let checkShow = false;
@@ -12,12 +13,12 @@ const Navigation=()=>{
             checkShow=true;
             navRef.current.className = 'Navigation navbar navbar-expand-lg navbar-light showNav';
         }
+        else if(window.scrollY <= 200 ){
+            navRef.current.className = 'Navigation navbar navbar-expand-lg navbar-light';
+        }
         else if(window.scrollY <= 600 && checkShow==true){
             checkShow=false;
             navRef.current.className = 'Navigation navbar navbar-expand-lg navbar-light hiddenNav';
-        }
-        else if(window.scrollY <= 200 ){
-            navRef.current.className = 'Navigation navbar navbar-expand-lg navbar-light';
         }
     }
     useEffect(() => {
@@ -69,15 +70,15 @@ const Navigation=()=>{
             <li className="nav-item">
                 <Link to='/###' className="nav-link" href="#">About</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
                 <Link to='/###' className="nav-link" href="#">Blog</Link>
-            </li>
+            </li> */}
             <li className="nav-item">
                 <Link to='/###' className="nav-link" href="#">Contact</Link>
             </li>
             <li className="nav-item active-item">
                 <Link to='/###' className="nav-link" href="#">
-                <i className="fa fa-shopping-cart"></i> [0]
+                <i className="fa fa-shopping-cart"></i> [{numberItem}]
                 </Link>
             </li>
             
@@ -87,4 +88,11 @@ const Navigation=()=>{
     </nav>
     ) 
 }
-export default Navigation;
+const mapStateToProps = (state)=>{
+    // let item=state.cart
+
+    return({
+        numberItem : state.cart.length,
+    })
+};
+export const ConnectedNavigation= connect(mapStateToProps, )(Navigation);

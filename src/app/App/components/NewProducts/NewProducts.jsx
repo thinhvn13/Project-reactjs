@@ -1,8 +1,9 @@
 import React from 'react';
 import './NewProducts.css';
 import { ProductCardPresentation } from '../ProductCard/index';
-import { Products } from './fake-data';
-const NewProducts=()=>{
+import { connect } from 'react-redux';
+
+const NewProducts=({products})=>{
     const HeaderNewProduct=()=>{
         return(
         <div className='container'>
@@ -24,7 +25,7 @@ const NewProducts=()=>{
         <div className='container'>
             <div className='row'>
                 {
-                    Products.map((product, i)=>{
+                    products.map((product, i)=>{
                         return(
                         <div className='col-sm-12 col-md-6 col-lg-3'key={i}>
                             <ProductCardPresentation item={product} />
@@ -38,4 +39,11 @@ const NewProducts=()=>{
         </section>
     )
 }
-export default NewProducts;
+
+const mapStateToProps = (state, ownProps)=>{
+    return({
+        products: state.products,
+    })
+};
+
+export const ConnectedNewProducts = connect(mapStateToProps, )(NewProducts); 

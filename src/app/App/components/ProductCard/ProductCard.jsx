@@ -1,8 +1,12 @@
 import React,{useRef} from 'react';
 import './ProductCard.css';
 import { Link } from 'react-router-dom';
+import Asset from './../../asset/Asset';
+import { connect } from 'react-redux';
+import * as mutations from './../../../store/mutations';
+import { history } from './../../../store/history';
 
-const ProductCard=({item})=>{
+const ProductCard=({item, cart, addProducttToCart, onEventBuyItem})=>{
     const show_btn=useRef(null);
     const show_bg=useRef(null);
     const zoom_img=useRef(null);
@@ -31,15 +35,15 @@ const ProductCard=({item})=>{
             onMouseOver={_onMouseHover}
             onMouseOut={_onMouseOut}
             >
-            <Link to='/#product' className='img-pro'>
-                <img src={item.img_product} ref={zoom_img}>
+            <Link to={`/product/${item.id}`} className='img-pro'>
+                <img src={Asset.listImageProduct[item.id-1]} ref={zoom_img} >
                 </img>
             </Link>
             {item.rate_sale==null? null:<span className='status'> {item.rate_sale}% Off</span>}
             <div className='circle-over' ref={show_bg}></div>
             <p className='btn-area' ref={show_btn}>
-                <span className='btn-add-to-cart'>ADD TO CART + &nbsp; </span>
-                <span className='btn-buy-now'>BUY NOW &nbsp;  
+                <span className='btn-add-to-cart' onClick={(e)=>addProducttToCart(e, item, cart)}>ADD TO CART + &nbsp; </span>
+                <span className='btn-buy-now' onClick={()=>onEventBuyItem(item, cart)} >BUY NOW &nbsp;  
                 <i className='fa fa-shopping-cart fa-1x'> &nbsp;  </i>
                 </span>
             </p>
@@ -77,10 +81,37 @@ const ProductCard=({item})=>{
                         </span>
                     </p>
                 </div>
-                
             </div>
         </div>
     )
 }
 
-export default ProductCard;
+const mapStateToProps = (state, ownProps)=>{
+    return({
+        cart: state.cart,
+    })
+};
+
+const mapDispatchToProps = (dispatch)=>({
+    addProducttToCart(e, item, cart){
+        e.preventDefault();
+        let temp = cart.find(i=>i.id===item.id)
+        if (temp==undefined){
+            dispatch(mutations.addProductToCart({...item, number_buy: 1}));
+        }
+        else if(temp){
+            dispatch(mutations.updateProductToCart({...item, number_buy: temp.number_buy+1}));
+        }
+    },
+    onEventBuyItem(item, cart){
+        let temp = cart.find(i=>i.id===item.id)
+        if (temp==undefined){
+            dispatch(mutations.addProductToCart({...item, number_buy: 1}));
+        }
+        else if(temp){
+            dispatch(mutations.updateProductToCart({...item, number_buy: temp.number_buy+1}));
+        }
+        history.push(`/cart`);
+    }
+});
+export const ConnectedProductCard=connect(mapStateToProps,mapDispatchToProps)(ProductCard);;

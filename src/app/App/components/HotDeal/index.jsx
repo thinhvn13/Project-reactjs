@@ -1,3 +1,3 @@
-import HotDeal from './HotDeal';
+import {ConnectedHotDeal} from './HotDeal';
 
-export const HotDealPresentation = HotDeal; 
+export const HotDealPresentation = ConnectedHotDeal; 

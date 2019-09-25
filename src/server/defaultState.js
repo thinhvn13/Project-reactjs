@@ -1,73 +1,121 @@
 import md5 from 'md5';
+
 export const defaultState = {
-    // session:{
-    //     authenticated: false
-    // },
-    users:[{
-        name:"Peter",
-        email:"example@gmail.com",
-        username:"DEV",
-        passwordHash:md5("TUPLES"),
-    },{
-        name:"Peter2",
-        email:"example1@gmail.com",
-        username:"DEV1",
-        passwordHash:md5("TUPLES"),
-    }],
-    groups:[{
-        name:"To Do",
-        id:"G1",
-        owner:"U1"
-    },{
-        name:"Doing",
-        id:"G2",
-        owner:"U1"
-    },{
-        name:"Done",
-        id:"G3",
-        owner:"U1"
-    }
-    ],
-    tasks:[{
-        name:"Refactor tests",
-        id:"T1",
-        group:"G1",
-        owner:"U1",
-        isComplete:false,
-    },{
-        name:"Meet with CTO",
-        id:"T2",
-        group:"G1",
-        owner:"U1",
-        isComplete:true,
-    },{
-        name:"Compile ES6",
-        id:"T3",
-        group:"G2",
-        owner:"U2",
-        isComplete:false,
-    },{
-        name:"Update component snapshots",
-        id:"T4",
-        group:"G2",
-        owner:"U1",
-        isComplete:true,
-    },{
-        name:"Production optimizations",
-        id:"T5",
-        group:"G3",
-        owner:"U1",
-        isComplete:false,
-    }],
-    comments:[{
-        owner:"U1",
-        id:"C1",
-        task:"T1",
-        content:"Great work!"
-    }],
-    emails:[
+    comments:[
         {
-            email:"example@gmail.com"
+            avatar:1,
+            comment:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+            name:'Garreth Smith',
+            position:'MARKETING MANAGER'
+        },
+        {
+            avatar:2,
+            comment:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+            name:'Garreth Smith',
+            position:'MARKETING MANAGER'
+        },
+        {
+            avatar:3,
+            comment:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+            name:'Garreth Smith',
+            position:'MARKETING MANAGER'
+        },
+        {
+            avatar:4,
+            comment:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+            name:'Garreth Smith',
+            position:'MARKETING MANAGER'
+        },
+        {
+            avatar:3,
+            comment:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+            name:'Garreth Smith',
+            position:'MARKETING MANAGER'
         }
+    ],
+    hotdeal:[{
+        name_product:'Nike Free RN 2019 iD',
+        old_price:'$120.00',
+        sale_price:'$80.00',
+        number_img:3,
+        dd:13,
+        hh:11,
+        mm:0,
+        ss:5,
+    }],
+    products:[
+        {
+            id:1,
+            name_product:'NIKE FREE RN 2019 ID',
+            price_old:'$120.00',
+            price_sale:'$80.00',
+            rate_sale:null,
+            star:3,
+            number:20,
+        },
+        {
+            id:2,
+            name_product:'NIKE FREE RN 2019 ID',
+            price_old:'$120.00',
+            price_sale:'$80.00',
+            rate_sale:50,
+            star:4,
+            number:55,
+        },
+        {
+            id:3,
+            name_product:'NIKE FREE RN 2019 ID',
+            price_old:'$120.00',
+            price_sale:'$80.00',
+            rate_sale:null,
+            star:5,
+            number:44,
+        },
+        {
+            id:4,
+            name_product:'NIKE FREE RN 2019 ID',
+            price_old:'$120.00',
+            price_sale:'$80.00',
+            rate_sale:null,
+            star:4,
+            number:33,
+        },
+        {
+            id:5,
+            name_product:'NIKE FREE RN 2019 ID',
+            price_old:'$120.00',
+            price_sale:'$80.00',
+            rate_sale:null,
+            star:4,
+            number:22,
+        },
+        {
+            id:6,
+            name_product:'NIKE FREE RN 2019 ID',
+            price_old:'$120.00',
+            price_sale:'$80.00',
+            rate_sale:30,
+            star:4,
+            number:11,
+        },
+        {
+            id:7,
+            name_product:'NIKE FREE RN 2019 ID',
+            price_old:'$120.00',
+            price_sale:'$80.00',
+            rate_sale:null,
+            star:5,
+            number:55,
+        },
+        {
+            id:8,
+            name_product:'NIKE FREE RN 2019 ID',
+            price_old:'$120.00',
+            price_sale:'$80.00',
+            rate_sale:10,
+            star:4,
+            number:0,
+        },
     ]
+
 };

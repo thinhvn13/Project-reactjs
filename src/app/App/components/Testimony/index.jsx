@@ -1,3 +1,3 @@
-import Testimony from "./Testimony";
+import {ConnectedTestimony} from "./Testimony";
 
-export const TestimonyContainer = Testimony;
+export const TestimonyContainer = ConnectedTestimony;

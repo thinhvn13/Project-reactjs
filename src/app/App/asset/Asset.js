@@ -38,5 +38,29 @@ const Asset = {
     ],
     image_hot_deal: require('./image/prod-1.png'),
     img_chooses:[img_choose_1,img_choose_2,img_choose_3],
+    listImageProduct:
+    [
+        require('./image/product-1.jpg'),
+        require('./image/product-2.jpg'),
+        require('./image/product-3.jpg')
+    ],
+    listImageProduct:
+        [
+        require('./image/product-1.png'),
+        require('./image/product-2.png'),
+        require('./image/product-3.png'),
+        require('./image/product-4.png'),
+        require('./image/product-5.png'),
+        require('./image/product-6.png'),
+        require('./image/product-7.png'),
+        require('./image/product-8.png')
+        ],
+    listAvatar:[
+        require('./image/person_1.jpg'),
+        require('./image/person_2.jpg'),
+        require('./image/person_3.jpg'),
+        require('./image/person_4.jpg'),
+        require('./image/person_4.jpg'),
+    ]
 }
 export default Asset;

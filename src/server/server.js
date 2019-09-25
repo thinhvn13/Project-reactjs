@@ -14,13 +14,29 @@ app.listen(port, console.log('this is port of server:', port));
 app.get('/',(req, res)=>{
     res.send("Hello Word!!!")
 });
-
-
 app.use(
     cors(),
     bodyParser.urlencoded({extended:true}),
     bodyParser.json()
 );
+async function getAllData(){
+    let db = await connectDB();
+
+    let products = await db.collection(`products`).find().toArray();
+    let comments = await db.collection(`comments`).find().toArray()
+    let hotdeal = await db.collection(`hotdeal`).find().toArray()
+    return {
+        products,
+        comments,
+        hotdeal
+    };
+}
+
+app.get('/home',async (req, res)=>{
+    let state = await getAllData();
+    return res.send({state});
+});
+
     
 authenticationRoute(app);
 registerRoute(app);

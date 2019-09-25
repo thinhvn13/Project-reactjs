@@ -1,3 +1,3 @@
-import Navigation from './Navigation';
+import {ConnectedNavigation} from './Navigation';
 
-export const NavigationPresentation = Navigation;
+export const NavigationPresentation = ConnectedNavigation;

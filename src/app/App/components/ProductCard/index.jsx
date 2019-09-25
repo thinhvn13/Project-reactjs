@@ -1,3 +1,3 @@
-import ProductCard from './ProductCard';
+import {ConnectedProductCard} from './ProductCard';
 
-export const ProductCardPresentation = ProductCard;
+export const ProductCardPresentation = ConnectedProductCard;

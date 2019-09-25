@@ -40,7 +40,7 @@ const CarouselBanner=()=>{
     let processClick = false;
 
     const _onChageSlide=(i)=>{
-        console.log(chooseImg);
+        // console.log(chooseImg);
         let move = (i+1)*(Carousel.current.offsetWidth/4);
         Carousel.current.style.transitionDuration='0.3s';
         Carousel.current.style.transform='translate('+(-move).toString()+'px)';
@@ -93,6 +93,8 @@ const CarouselBanner=()=>{
     // calculate move muouse
     
     const _onAutoChageItem = setTimeout(() => {
+                window.removeEventListener('mousemove',_onMoveMouse, false);
+                window.removeEventListener('mouseup',_onUpMouse, false);
                 if(chooseImg==0 && processClick==false ){
                     setChooseImg(1);
                     Carousel.current.style.transitionDuration='0s';

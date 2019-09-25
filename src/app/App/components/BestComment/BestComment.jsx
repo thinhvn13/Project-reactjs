@@ -1,4 +1,4 @@
-import React, {useState,useRef, useEffect} from 'react';
+import React, {useState,useRef, useEffect, useCallback} from 'react';
 import './BestComment.css';
 
 import { CommentCardPresentation } from '../CommentCard';
@@ -9,8 +9,9 @@ const BestComment=({comments})=>{
     let cordinateStep=0;
     let moveX=0;
     let currentWitdh=document.documentElement.clientWidth;
-    const tempdata = comments;
-    if(tempdata.length < 6){
+    let numberComments = [...Array(comments.length).keys()]
+    const tempdata = [...comments];
+    if(tempdata.length < comments.length+2){
         tempdata.push(comments[0]);
         tempdata.unshift(comments[4]);
     }
@@ -29,7 +30,7 @@ const BestComment=({comments})=>{
         }
     }
     const _onClickChoose=(n)=>{     
-        console.log(n)
+        // console.log(n)
         if(n==0 & IndexComment==4){
             checkWidth.current.style.transitionDuration='0.3s';
             let cordinate = (checkWidth.current.offsetWidth +30)*(4+1);
@@ -140,7 +141,7 @@ const BestComment=({comments})=>{
                     return(
                         <div className={clsComment} key={i}>
                         <CommentCardPresentation
-                            image={item.image}
+                            image={item.avatar-1}
                             comment={item.comment}
                             name={item.name}
                             position={item.position}
@@ -154,7 +155,7 @@ const BestComment=({comments})=>{
            </div>  
         <div className='btn-dots'>
            {
-               [0,1,2,3,4].map((index, i)=>{
+               numberComments.map((index, i)=>{
                 //    {console.log(index)}
                    if (index==IndexComment){
                        return(

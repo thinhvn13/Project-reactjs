@@ -1,3 +1,3 @@
-import NewProducts from './NewProducts';
+import {ConnectedNewProducts} from './NewProducts';
 
-export const NewProductsPresentation = NewProducts;
+export const NewProductsPresentation = ConnectedNewProducts;

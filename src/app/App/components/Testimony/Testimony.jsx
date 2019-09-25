@@ -3,8 +3,9 @@ import './Testimony.css';
 import { BenefitCardsPresentation } from './../BenefitCards/index';
 import { BestCommentPresentation } from '../BestComment';
 import {APIComments} from './Api-test';
+import { connect } from 'react-redux';
 
-const Testimony=()=>{
+const Testimony=({comments})=>{
     return(
         <section className='testimony'>
         <div className='container'>
@@ -13,12 +14,18 @@ const Testimony=()=>{
                 <BenefitCardsPresentation/>
             </div>
             <div className='col-lg-7'>
-                <BestCommentPresentation comments={APIComments}/>
+                {comments.length==0? null:
+                <BestCommentPresentation comments={comments}/>}
             </div>
             </div>    
         </div>
         </section>
     )
 }
+const mapStateToProps = (state, ownProps)=>{
+    return({
+        comments: state.comments,
+    })
+};
 
-export default Testimony;
+export const ConnectedTestimony = connect(mapStateToProps, )(Testimony);

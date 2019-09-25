@@ -28,6 +28,37 @@ export const REQUEST_CREATE_USER = `REQUEST_CREATE_USER`;
 export const INSERT_EMAIL = `INSERT_EMAIL`;
 export const INSERT_EMAIL_SUCCESS = `INSERT_EMAIL_SUCCESS`;
 
+export const LOAD_COMMENTS = `LOAD_COMMENTS`;
+export const LOAD_PRODUCTS = `LOAD_PRODUCTS`;
+export const LOAD_HOTDEALS = `LOAD_HOTDEALS`;
+
+// *************************************//
+export const REQUEST_STATE = `REQUEST_STATE`;
+export const ADD_PRODUCT_TO_CART = `ADD_PRODUCT_TO_CART`;
+export const DELETE_PRODUCT_TO_CART = `DELETE_PRODUCT_TO_CART`;
+export const UPDATE_PRODUCT_TO_CART = `UPDATE_PRODUCT_TO_CART`;
+
+export const requestState = ()=>({
+    type:REQUEST_STATE,
+});
+
+export const setState = (state = {})=>({
+    type:SET_STATE,
+    state
+});
+
+export const addProductToCart=(item)=>({
+    type: ADD_PRODUCT_TO_CART,
+    item
+})
+export const updateProductToCart=(item)=>({
+    type: UPDATE_PRODUCT_TO_CART,
+    item
+})
+
+
+// *************************************//
+
 export const setTaskCompletion = (id, isComplete)=>({
     type: SET_TASK_COMPLETE,
     taskID: id,
@@ -78,10 +109,6 @@ export const processAuthenticateUser = (status = AUTHENTICATING, session = null)
     session,
 });
 
-export const setState = (state = {})=>({
-    type:SET_STATE,
-    state
-});
 
 //Create user
 export const createUser = (nameNewUser, emailNewUser, usernameNewUser, passwordNewUser)=>({

@@ -5,96 +5,55 @@ import createSagaMiddleware from 'redux-saga';
 
 const sagaMiddleware  = createSagaMiddleware();
 // import * as sagas from './sagas.mock';
-import * as sagas from './sagas';
+// import * as sagas from './sagas';
+import rootSaga from './sagas'
 import * as mutations from './mutations';
 
 export const store=createStore(
     combineReducers({
-        session(userSession=null || {}, action){
-            let {type, authenticated, session}=action;
-            switch(type){
-                case mutations.SET_STATE:
-                    return {...userSession, id: action.state.session.id}
-                case mutations.REQUEST_AUTHENTICATE_USER: 
-                    return {...userSession, authenticated:mutations.AUTHENTICATING};
-                case mutations.PROCESSING_AUTHENTICATE_USER:
-                    return {...userSession, authenticated};
-                default:
-                    console.log('sdsds', session)
-                    return userSession
-            }    
-        },
-        status_create_user(status=null , action){
-            let {type, status_create_user}=action;
-            switch(type){
-                case mutations.PROCESSING_CREATE_USER:
-                    return status_create_user;
-                default:
-                    return status
+        cart:(cart = [],action)=>{
+            switch (action.type) {
+                case mutations.ADD_PRODUCT_TO_CART:
+                    return [...cart,
+                    Object.assign({},action.item)
+                    ];
+                case mutations.UPDATE_PRODUCT_TO_CART:
+                    return [...cart.filter(item=>item.id!==action.item.id),
+                    Object.assign({},action.item)
+                    ];
             }
+            return cart;
         },
-        tasks(tasks=[],action){
-            switch(action.type){
-                case mutations.SET_STATE:
-                    return action.state.tasks;
-                case mutations.CREATE_TASK:
-                    return [...tasks,{
-                        id:action.taskID,
-                        name:"New Task",
-                        group:action.groupID,
-                        owner:action.ownerID,
-                        isComplete:false
-                    }]
-                case mutations.SET_TASK_COMPLETE:
-                    return tasks.map(task=>{
-                        return (task.id === action.taskID) ? {...task,
-                            isComplete:action.isComplete} : 
-                            task;
-                    });
-                case mutations.SET_TASK_NAME:
-                    return tasks.map(task=>{
-                        return (task.id === action.taskID) ? {...task,
-                            name:action.name} : 
-                            task;
-                    });
-                case mutations.SET_TASK_GROUP:
-                    return tasks.map(task=>{
-                        return (task.id === action.taskID) ? {...task,
-                            group:action.groupID} : 
-                            task;
-                    });
-            }
-            return tasks;
-        },
-    
         comments:(comments = [],action)=>{
-            // switch (action.type) {
-            //     case mutations.ADD_TASK_COMMENT:
-            //         let {type,owner,task,content,id} = action;
-            //         return [...comments,{owner,task,content,id}];
-            //     case mutations.SET_STATE:
-            //         return action.state.comments;
-            // }
+            switch (action.type) {
+                case mutations.SET_STATE:
+                    return action.state.comments;
+            }
             return comments;
-        },
-        users:(users = [],action)=>{
+        },  
+        products:(products = [],action)=>{
             switch (action.type) {
                 case mutations.SET_STATE:
-                    return action.state.users;
+                    return action.state.products;;
             }
-            return users;
+            return products;
         },
-        groups:(groups = [],action)=>{
+            
+        hotdeal:(hotdeal = [],action)=>{
             switch (action.type) {
                 case mutations.SET_STATE:
-                    return action.state.groups;
+                    return action.state.hotdeal;
             }
-            return groups;
+            return hotdeal;
         },
+
     }),
     applyMiddleware(createLogger(), sagaMiddleware)
 )
 
-for (let saga in sagas){
-    sagaMiddleware.run(sagas[saga])
-}
+// for (let saga in sagas){
+//     sagaMiddleware.run(sagas[saga])
+// }
+
+sagaMiddleware.run(rootSaga)
+// store.dispatch(mutations.requestState());
